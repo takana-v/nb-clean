@@ -227,6 +227,7 @@ def clean_notebook(
         if cell["cell_type"] == "code":
             cell["execution_count"] = None
             cell["outputs"] = []
+            cell["metadata"] = {"tags": ["hide-input"]}
 
     try:
         del notebook["metadata"]["language_info"]["version"]
