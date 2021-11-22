@@ -233,4 +233,9 @@ def clean_notebook(
     except KeyError:
         pass
 
+    try:
+        del notebook["metadata"]["colab"]
+    except KeyError:
+        pass
+
     return notebook
